@@ -1,0 +1,13 @@
+C:\Users\admin\Source\Repos\MyTelegramBot\MyTelegramBot\bin\Debug\MyTelegramBot.exe.config
+C:\Users\admin\Source\Repos\MyTelegramBot\MyTelegramBot\bin\Debug\MyTelegramBot.exe
+C:\Users\admin\Source\Repos\MyTelegramBot\MyTelegramBot\bin\Debug\MyTelegramBot.pdb
+C:\Users\admin\Source\Repos\MyTelegramBot\MyTelegramBot\bin\Debug\CloudrailSI.dll
+C:\Users\admin\Source\Repos\MyTelegramBot\MyTelegramBot\bin\Debug\Newtonsoft.Json.dll
+C:\Users\admin\Source\Repos\MyTelegramBot\MyTelegramBot\bin\Debug\TeleBotDotNet.dll
+C:\Users\admin\Source\Repos\MyTelegramBot\MyTelegramBot\bin\Debug\Telegram.Bot.dll
+C:\Users\admin\Source\Repos\MyTelegramBot\MyTelegramBot\bin\Debug\Newtonsoft.Json.xml
+C:\Users\admin\Source\Repos\MyTelegramBot\MyTelegramBot\bin\Debug\Telegram.Bot.xml
+C:\Users\admin\Source\Repos\MyTelegramBot\MyTelegramBot\obj\Debug\MyTelegramBot.csproj.CoreCompileInputs.cache
+C:\Users\admin\Source\Repos\MyTelegramBot\MyTelegramBot\obj\Debug\MyTelegramBot.csproj.CopyComplete
+C:\Users\admin\Source\Repos\MyTelegramBot\MyTelegramBot\obj\Debug\MyTelegramBot.exe
+C:\Users\admin\Source\Repos\MyTelegramBot\MyTelegramBot\obj\Debug\MyTelegramBot.pdb
