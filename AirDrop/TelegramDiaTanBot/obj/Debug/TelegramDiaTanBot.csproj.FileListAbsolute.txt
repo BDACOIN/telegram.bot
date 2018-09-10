@@ -47,7 +47,6 @@ D:\bdaproject\telegram.bot\AirDrop\TelegramDiaTanBot\bin\Debug\TeleBotDotNet.dll
 D:\bdaproject\telegram.bot\AirDrop\TelegramDiaTanBot\bin\Debug\Telegram.Bot.dll
 D:\bdaproject\telegram.bot\AirDrop\TelegramDiaTanBot\bin\Debug\Newtonsoft.Json.xml
 D:\bdaproject\telegram.bot\AirDrop\TelegramDiaTanBot\bin\Debug\Telegram.Bot.xml
-D:\bdaproject\telegram.bot\AirDrop\TelegramDiaTanBot\obj\Debug\TelegramDiaTanBot.csprojResolveAssemblyReference.cache
 D:\bdaproject\telegram.bot\AirDrop\TelegramDiaTanBot\obj\Debug\TelegramDiaTanBot.csproj.CoreCompileInputs.cache
 D:\bdaproject\telegram.bot\AirDrop\TelegramDiaTanBot\obj\Debug\TelegramDiaTanBot.csproj.CopyComplete
 D:\bdaproject\telegram.bot\AirDrop\TelegramDiaTanBot\obj\Debug\TelegramDiaTanBot.exe

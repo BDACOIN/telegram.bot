@@ -7,13 +7,6 @@ using Newtonsoft.Json;
 using System.Text.RegularExpressions;
 using System.IO;
 
-/*
- *         memberinfo = {
-            "eth_address": "",
-            "user_id": 0
-        }
-*/
-
 
 namespace Awesome
 {
@@ -60,13 +53,14 @@ namespace Awesome
                         {
                             // e.Message.From.Id
                             await botClient.SendTextMessageAsync(
-                              chatId: e.Message.Chat, text: "返信相手:\n　@" + e.Message.From.Username + "\n------------------------\nあなたのUserNameは、「@" + e.Message.From.Username + "」です。\nこのUserNameをGoogleFormへと記載してください。" + "\n");
+                              chatId: e.Message.Chat, text: "返信相手(Reply):\n　@" + e.Message.From.Username + "\n------------------------\nあなたのUserNameは、「@" + e.Message.From.Username + "」です。\nこのUserNameをGoogle Formへと記載してください。" + "\n" + "(Your UserName is '@" + e.Message.From.Username+ "'.\nPlease fill in this one in Google Form.)");
 
                         }
                         else
                         {
                             await botClient.SendTextMessageAsync(
-                            chatId: e.Message.Chat, text: "返信相手:\n　" + e.Message.From.FirstName + " " + e.Message.From.LastName + "\n------------------------\nあなたはUserName (@から始まる名前) を設定していません。\n替わりにName「" + e.Message.From.FirstName + " " + e.Message.From.LastName + "」をGoogleFormへと記載してください。" + "\n");
+                            chatId: e.Message.Chat, text: "返信相手(Reply):\n　" + e.Message.From.FirstName + " " + e.Message.From.LastName + "\n------------------------\nあなたはUserName (@から始まる名前) を設定していません。\n替わりに「" + e.Message.From.FirstName + " " + e.Message.From.LastName + "」の名前をGoogle Formへと記載してください。" + "\n" +
+                            "(You have not set UserName (UserName starting with '@').\nInstead of UserName, fill in this '" + e.Message.From.FirstName + " " + e.Message.From.LastName + "' name in Google Form.)");
                         }
 
                         MemberInfo mi = new MemberInfo();
@@ -87,7 +81,7 @@ namespace Awesome
                     else
                     {
                         await botClient.SendTextMessageAsync(
-                          chatId: e.Message.Chat, text: "返信相手:\n　" + e.Message.From.FirstName + " " + e.Message.From.LastName + "\n------------------------\n" + "イーサリアムアドレスを投稿しようとしましたか？ 間違いがあるようです。");
+                          chatId: e.Message.Chat, text: "返信相手(Reply):\n　" + e.Message.From.FirstName + " " + e.Message.From.LastName + "\n------------------------\n" + "イーサリアムアドレスを投稿しようとしていますか？\n間違いがあるようです。\n" + "(Did you post your Ether wallet address?\nThere seems to be a mistake.)");
                     }
                 }
                 else if (e.Message.Text != null && e.Message.Text.StartsWith("3P"))
@@ -96,7 +90,8 @@ namespace Awesome
                     if (m.Success)
                     {
                         await botClient.SendTextMessageAsync(
-                          chatId: e.Message.Chat, text: "返信相手:\n　" + e.Message.From.FirstName + " " + e.Message.From.LastName + "\n------------------------\n" + "Wavesのウォレットアドレスを投稿しようとしていますか？\nWavesのウォレットアドレスではなくイーサウォレットアドレスを投稿してください。");
+                          chatId: e.Message.Chat, text: "返信相手(Reply):\n　" + e.Message.From.FirstName + " " + e.Message.From.LastName + "\n------------------------\n" + "Wavesのウォレットアドレスを投稿しようとしていますか？\nWavesのウォレットアドレスではなく、イーサウォレットアドレスを投稿してください。\n" +
+                          "(Did you post your Waves wallet address?\nPlease post your Ether wallet address, not the Waves one.)");
                     }
                 }
             } catch(Exception ex)
