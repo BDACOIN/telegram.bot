@@ -1,4 +1,9 @@
-﻿
+﻿/**
+ *
+ * Copyright (C) 2018 Akitsugu Komiyama
+ * under the GPL v3 License.
+ * 
+ */
 using System;
 using System.Threading;
 using Telegram.Bot;
@@ -54,9 +59,9 @@ namespace Awesome
                         {
                             // e.Message.From.Id
                             // await botClient.SendTextMessageAsync(
-                            //  chatId: e.Message.Chat, text: "返信相手(Reply):\n　@" + e.Message.From.Username + "\n------------------------\nあなたのUserNameは、「@" + e.Message.From.Username + "」です。\nこのUserNameをGoogle Formへと記載してください。" + "\n" + "(Your UserName is '@" + e.Message.From.Username+ "'.\nPlease fill in this one in Google Form.)");
+                            //  chatId: e.Message.Chat, text: "返信相手(Reply):\n　@" + e.Message.From.FirstName + " " + e.Message.From.LastName + " ( " +e.Message.From.Username + " )\n------------------------\nあなたのUserNameは、「@" + e.Message.From.Username + "」です。\nこのUserNameをGoogle Formへと記載してください。" + "\n" + "(Your UserName is '@" + e.Message.From.Username+ "'.\nPlease fill in this one in Google Form.)");
                             await botClient.SendTextMessageAsync(
-                              chatId: e.Message.Chat, parseMode:ParseMode.Markdown, text: "返信相手(Reply):\n　@" + e.Message.From.Username + "\n------------------------\nあなたの番号は、「 *" + e.Message.From.Id + "* 」です。\nこの番号をGoogle Formへと記載してください。" + "\n" + "(Your number is *" + e.Message.From.Id + "* .\nPlease fill in this number in Google Form.)");
+                              chatId: e.Message.Chat, parseMode:ParseMode.Default, text: "返信相手(Reply):\n" + e.Message.From.FirstName + " " + e.Message.From.LastName + " ( @" + e.Message.From.Username + " )\n------------------------\nあなたの番号は、「 " + e.Message.From.Id + " 」です。\nこの番号をGoogle Formへと記載してください。" + "\n" + "(Your number is " + e.Message.From.Id + " .\nPlease fill in this number in Google Form.)");
 
                         }
                         else
@@ -65,7 +70,7 @@ namespace Awesome
                             // chatId: e.Message.Chat, text: "返信相手(Reply):\n　" + e.Message.From.FirstName + " " + e.Message.From.LastName + "\n------------------------\nあなたはUserName (@から始まる名前) を設定していません。\n替わりに「" + e.Message.From.FirstName + " " + e.Message.From.LastName + "」の名前をGoogle Formへと記載してください。" + "\n" +
                             // "(You have not set UserName (UserName starting with '@').\nInstead of UserName, fill in this '" + e.Message.From.FirstName + " " + e.Message.From.LastName + "' name in Google Form.)");
                             await botClient.SendTextMessageAsync(
-                            chatId: e.Message.Chat, parseMode:ParseMode.Markdown, text: "返信相手(Reply):\n　" + e.Message.From.FirstName + " " + e.Message.From.LastName + "\n------------------------\nあなたの番号は、「 *" + e.Message.From.Id + "* 」です。\nこの番号をGoogle Formへと記載してください。" + "\n" + "(Your number is *" + e.Message.From.Id + "* .\nPlease fill in this number in Google Form.)");
+                            chatId: e.Message.Chat, parseMode:ParseMode.Default, text: "返信相手(Reply):\n　" + e.Message.From.FirstName + " " + e.Message.From.LastName + "\n------------------------\nあなたの番号は、「 " + e.Message.From.Id + " 」です。\nこの番号をGoogle Formへと記載してください。" + "\n" + "(Your number is " + e.Message.From.Id + " .\nPlease fill in this number in Google Form.)");
                         }
 
                         MemberInfo mi = new MemberInfo();
